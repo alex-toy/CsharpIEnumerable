@@ -49,6 +49,15 @@ namespace IEnumerableApp.Controllers
             //icoll_todos.Insert(3); doesn't work
             ilist_todos.RemoveAt(3);
 
+            //differed execution
+            var ienum_first1 = ienum_todos.FirstOrDefault();
+            var ienum_first2 = ienum_todos.FirstOrDefault(u => u.Item.Contains("c"));
+            var ienum_first3 = ienum_todos.Count();
+
+            var icoll_first1 = ienum_todos.FirstOrDefault();
+            var icoll_first2 = ienum_todos.FirstOrDefault(u => u.Item.Contains("c"));
+            var icoll_first3 = ienum_todos.Count();
+
             return View();
         }
 

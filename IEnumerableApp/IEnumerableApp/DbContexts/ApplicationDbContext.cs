@@ -11,6 +11,7 @@ namespace Products.API.DbContexts
         }
 
         public DbSet<ToDo> ToDos { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -21,6 +22,13 @@ namespace Products.API.DbContexts
                 new ToDo() { Id = 2, Item = "Onion" },
                 new ToDo() { Id = 3, Item = "Rice" },
                 new ToDo() { Id = 4, Item = "Cheese" }
+            );
+
+            builder.Entity<Employee>().HasData(
+                new Employee() { Id = 1, Salary = 10000, DepartmentId = 1, Name = "alex" },
+                new Employee() { Id = 2, Salary = 50000, DepartmentId = 2, Name = "seb" },
+                new Employee() { Id = 3, Salary = 100000, DepartmentId = 3, Name = "kate" },
+                new Employee() { Id = 4, Salary = 9000, DepartmentId = 4, Name = "chris" }
             );
         }
     }

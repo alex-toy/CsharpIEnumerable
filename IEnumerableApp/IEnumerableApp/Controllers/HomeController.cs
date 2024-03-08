@@ -64,7 +64,16 @@ namespace IEnumerableApp.Controllers
         public IActionResult Enumerables()
         {
             IEnumerable<Employee> employees = _db.Employees; // loading the employee table
-            IEnumerable<Employee> employees1 = employees.Where(e => e.DepartmentId == 2).ToList();
+            foreach (var employee in employees) Console.WriteLine($"{employee.Name}");
+
+            //IEnumerable<Employee> employees1 = employees.Where(e => e.Salary >= 50000).ToList();
+            //foreach (var employee in employees1) Console.WriteLine($"{employee.Name}");
+
+            IQueryable<Employee> employees2 = _db.Employees.Where(e => e.Salary >= 50000);
+            foreach (var employee in employees2) Console.WriteLine($"{employee.Name}");
+
+            IQueryable<Employee> employees3 = employees.AsQueryable().Where(e => e.Salary >= 50000);
+            foreach (var employee in employees3) Console.WriteLine($"{employee.Name}");
 
             return View("Index");
         }

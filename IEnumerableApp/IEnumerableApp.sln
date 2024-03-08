@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IEnumerableApp", "IEnumerableApp\IEnumerableApp.csproj", "{BF85001A-4105-4E26-9EA0-B04B0C0FBEDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAboutEnumerables", "AllAboutEnumerables\AllAboutEnumerables.csproj", "{40E2782F-9B11-482B-94EA-5F4BEF3475C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAboutEnumerables", "AllAboutEnumerables\AllAboutEnumerables.csproj", "{40E2782F-9B11-482B-94EA-5F4BEF3475C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorBasics", "IteratorBasics\IteratorBasics.csproj", "{5985293D-218E-4A93-ADDC-1972F9805C75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{40E2782F-9B11-482B-94EA-5F4BEF3475C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40E2782F-9B11-482B-94EA-5F4BEF3475C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40E2782F-9B11-482B-94EA-5F4BEF3475C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5985293D-218E-4A93-ADDC-1972F9805C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5985293D-218E-4A93-ADDC-1972F9805C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5985293D-218E-4A93-ADDC-1972F9805C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5985293D-218E-4A93-ADDC-1972F9805C75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

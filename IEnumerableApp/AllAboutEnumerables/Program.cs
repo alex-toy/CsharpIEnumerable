@@ -26,7 +26,6 @@
 
 //foreach (var item in myListAsEnumerable) Console.WriteLine(item);
 
-//// let's have a quick look at what this means for return types!
 IEnumerable<string> FunctionThatReturnsAnArrayAsEnumerable()
 {
     return new string[] { "A", "B", "C" };

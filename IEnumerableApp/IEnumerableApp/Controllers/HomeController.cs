@@ -78,15 +78,19 @@ namespace IEnumerableApp.Controllers
             return View("Index");
         }
 
-        public IActionResult Privacy()
+        public IActionResult Customers()
         {
-            return View();
-        }
+            IQueryable<Customer> customers_iquer = _db.Customers.AsQueryable();
+            IEnumerable<Customer> customers_ienum= _db.Customers.AsEnumerable();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            IEnumerable<Customer> highRevenueCustomers = customers_ienum.Where(c => c.Revenue > 50000);
+            IEnumerable<Customer> lowRevenueCustomers = customers_iquer.Where(c => c.Revenue < 50000);
+
+            var temp = highRevenueCustomers.ToList();
+            var temp2 = lowRevenueCustomers.ToList();
+
+
+            return View("Index");
         }
     }
 }
